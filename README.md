@@ -4,41 +4,20 @@ A curated collection of Jupyter notebooks, datasets, and small utilities explori
 
 If you're new to this workspace, start with the Quickstart section to set up your environment on Windows.
 
-## Simple Linear Regression
+## Topics (Quick Links)
 
-Kick off with the most fundamental model: a straight-line fit between one feature and a target.
-
-- Notebook: `Supervised ML/Simple_linear_regression/linear_regression_single_variable.ipynb`
-- Goal: Understand the relationship y ≈ a·x + b, interpret slope/intercept, and assess fit with RMSE/R².
-- Steps:
-  1) Open the notebook in Jupyter
-  2) Run cells top-to-bottom
-  3) Experiment by changing the train/test split and plotting residuals
-
-As we progress day by day, we’ll add one concept at a time (see Daily growth plan) and keep notes in `CHANGELOG.md`.
+- [Simple Linear Regression (notebook)](Supervised%20ML/Simple_linear_regression/linear_regression_single_variable.ipynb)
+- [Simple Linear Regression (folder)](Supervised%20ML/Simple_linear_regression/)
+- [Multiple Linear Regression (notebook)](Supervised%20ML/Multiple_linear_regression/linear_regression_mul_var.ipynb)
+- [Multiple Linear Regression (folder)](Supervised%20ML/Multiple_linear_regression/)
 
 ## What is Machine Learning
 
-- Machine Learning (ML) is about teaching computers to learn patterns from data and make predictions or decisions without being explicitly programmed for every rule.
-- Supervised learning (the focus here) means we provide examples with inputs (features) and known answers (labels) so models can learn the mapping.
-- Typical workflow:
-  1) Load and explore data
-  2) Split into train/test sets
-  3) Preprocess features (encode categories, scale numbers)
-  4) Train a model
-  5) Evaluate with appropriate metrics
-  6) Tune/improve (regularization, better features, ensembles)
+Machine Learning (ML) learns patterns from data to make predictions. This workspace focuses on supervised learning with tabular datasets using Python (pandas, scikit-learn, etc.).
 
 ## How this repository will grow
 
-We’ll expand from fundamentals to advanced methods incrementally:
-- Data handling, splitting, and evaluation metrics
-- Feature engineering (encoding, scaling) and pipelines
-- Core models for regression and classification
-- Regularization and optimization
-- Ensemble methods (bagging, boosting, voting)
-
-The detailed repository map will be added later as topics are introduced.
+We’ll add topics incrementally (splits/metrics → preprocessing → core models → regularization → ensembles). Detailed explanations will live inside each topic’s folder, not here.
 
 ---
 
