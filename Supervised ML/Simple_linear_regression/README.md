@@ -12,14 +12,35 @@ This project serves as a beginner-friendly introduction to implementing Simple L
 
 The goal of simple linear regression is to find the best-fitting straight line through the data points. This line is represented by the equation:
 
-**`Y = mX + c`**
+**`y = mx + c`**
 
-- **Y**: The dependent variable (what we want to predict, i.e., `price`).
-- **X**: The independent variable (the feature we use for prediction, i.e., `area`).
-- **m**: The slope or **coefficient** of the line. It represents the change in `Y` for a one-unit change in `X`.
-- **c**: The **intercept**, which is the value of `Y` when `X` is 0.
+- **y**: The dependent variable (what we want to predict, i.e., `price`).
+- **x**: The independent variable (the feature we use for prediction, i.e., `area`).
+- **m**: The slope or **coefficient** of the line. It represents the change in `y` for a one-unit change in `x`.
+- **c**: The **intercept**, which is the value of `y` when `x` is 0.
 
-The algorithm finds the optimal values for `m` and `c` by minimizing the **Sum of Squared Errors** (or Residuals), which is the sum of the squared differences between the actual `Y` values and the predicted `Y` values.
+### Ordinary Least Squares (OLS)
+
+The algorithm finds the optimal values for `m` and `c` by minimizing a cost function. The most common method is **Ordinary Least Squares (OLS)**, which minimizes the **Sum of Squared Errors (SSE)** (also called Residual Sum of Squares).
+
+The error (or residual) for each data point is the difference between the actual value (`y_i`) and the predicted value (`ŷ_i`).
+
+**Error (Residual):** `e_i = y_i - ŷ_i`
+
+**Cost Function (SSE):**
+`SSE = Σ(y_i - ŷ_i)² = Σ(y_i - (mx_i + c))²`
+
+OLS finds the `m` and `c` that make this sum as small as possible. The closed-form solution is:
+
+**Slope (m):**
+`m = Σ((x_i - x̄)(y_i - ȳ)) / Σ(x_i - x̄)²`
+
+**Intercept (c):**
+`c = ȳ - m * x̄`
+
+Where:
+- `x̄` is the mean of the independent variable `x`.
+- `ȳ` is the mean of the dependent variable `y`.
 
 ## 📊 Dataset
 

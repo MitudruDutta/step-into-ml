@@ -12,14 +12,38 @@ This project demonstrates how to predict home prices using multiple features—s
 
 The goal is to find the best-fitting linear equation that describes the relationship between the features and the target. The equation for multiple linear regression is:
 
-**`Y = m1*X1 + m2*X2 + ... + mn*Xn + c`**
+**`y = β₀ + β₁X₁ + β₂X₂ + ... + βₚXₚ + ε`**
 
-- **Y**: The dependent variable (e.g., `price`).
-- **X1, X2, ..., Xn**: The independent variables (e.g., `area`, `bedrooms`).
-- **m1, m2, ..., mn**: The coefficients for each independent variable. Each coefficient represents the change in `Y` for a one-unit change in its corresponding `X`, holding all other variables constant.
-- **c**: The intercept, which is the value of `Y` when all `X` variables are 0.
+- **y**: The dependent (target) variable.
+- **X₁, X₂, ..., Xₚ**: The independent variables (features).
+- **β₀**: The intercept of the model (value of `y` when all features are zero).
+- **β₁, β₂, ..., βₚ**: The coefficients for each feature. `βᵢ` represents the change in `y` for a one-unit change in `Xᵢ`, holding all other features constant.
+- **ε**: The error term (residuals), representing the difference between the observed and predicted values.
 
-The algorithm determines the optimal values for the coefficients and the intercept by minimizing the Sum of Squared Errors.
+### Matrix Form and The Normal Equation
+
+In practice, especially with many features, the equation is expressed in matrix form:
+
+**`y = Xβ + ε`**
+
+- **y**: A vector of observed target values.
+- **X**: The design matrix, where each row is an observation and each column is a feature (with an initial column of ones for the intercept `β₀`).
+- **β**: The vector of coefficients (`β₀, β₁, ..., βₚ`).
+- **ε**: The vector of errors.
+
+The coefficients (β) are found by minimizing the **Sum of Squared Errors (SSE)**, also known as the Residual Sum of Squares (RSS).
+
+**Cost Function (SSE):**
+`SSE = Σ(yᵢ - ŷᵢ)² = (y - Xβ)ᵀ(y - Xβ)`
+
+The closed-form solution to find the vector of coefficients `β` that minimizes this cost function is called the **Normal Equation**:
+
+**`β = (XᵀX)⁻¹Xᵀy`**
+
+- **Xᵀ**: The transpose of the design matrix `X`.
+- **(XᵀX)⁻¹**: The inverse of the matrix product `XᵀX`.
+
+This equation directly calculates the optimal coefficients without requiring an iterative optimization process like gradient descent.
 
 ## 📊 Dataset
 
