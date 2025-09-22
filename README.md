@@ -12,6 +12,9 @@ A growing, hands-on workspace of Jupyter notebooks and small datasets to learn s
 - Multiple Linear Regression
   - Notebook: [linear_regression_mul_var.ipynb](Supervised%20ML/Multiple_linear_regression/linear_regression_mul_var.ipynb)
   - Folder: [Supervised ML/Multiple_linear_regression](Supervised%20ML/Multiple_linear_regression/)
+- Train/Test Split
+  - Notebook: [train_test_split.ipynb](Supervised%20ML/Train_Test_Split/train_test_split.ipynb)
+  - Folder: [Supervised ML/Train_Test_Split](Supervised%20ML/Train_Test_Split/)
 
 For all other topics (e.g., train/test split, scaling, regularization, classification, ensembles), navigate via the folder tree. Detailed write-ups live inside each topic, not here.
 
@@ -46,7 +49,7 @@ Use scikit-learn for practical training/evaluation:
 
 ---
 
-## Daily growth plan 
+## Daily growth plan (incremental)
 
 1) Day 1: Simple Linear Regression
 2) Day 2: Train/Test Split and Regression Metrics (MSE/RMSE, R²)
