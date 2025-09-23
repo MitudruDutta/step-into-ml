@@ -12,11 +12,14 @@ A growing, hands-on workspace of Jupyter notebooks and small datasets to learn s
 - Multiple Linear Regression
   - Notebook: [linear_regression_mul_var.ipynb](Supervised%20ML/Multiple_linear_regression/linear_regression_mul_var.ipynb)
   - Folder: [Supervised ML/Multiple_linear_regression](Supervised%20ML/Multiple_linear_regression/)
+- Polynomial Regression
+  - Notebook: [poly_regression.ipynb](Supervised%20ML/Polynomial_Regression/poly_regression.ipynb)
+  - Folder: [Supervised ML/Polynomial_Regression](Supervised%20ML/Polynomial_Regression/)
 - Train/Test Split
   - Notebook: [train_test_split.ipynb](Supervised%20ML/Train_Test_Split/train_test_split.ipynb)
   - Folder: [Supervised ML/Train_Test_Split](Supervised%20ML/Train_Test_Split/)
 
-For all other topics (e.g., train/test split, scaling, regularization, classification, ensembles), navigate via the folder tree. Detailed write-ups live inside each topic, not here.
+For all other topics (e.g., scaling, regularization, classification, ensembles), navigate via the folder tree. Detailed write-ups live inside each topic, not here.
 
 ---
 
@@ -36,15 +39,21 @@ Machine Learning (ML) uses data to learn patterns that generalize to unseen case
   - Common metrics:
     - MSE = (1/n) Σ (yᵢ − ŷᵢ)²
     - RMSE = √MSE
-    - R² = 1 − Σ(yᵢ − ŷᵢ)² / Σ(yᵢ − ȳ)²
+    - R² = 1 − Σ(yᵢ − ȳ)² / Σ(yᵢ − ȳ)²
 
 - Multiple Linear Regression (many features):
   - Model: y = β₀ + β₁x₁ + … + β_px_p + ε (vector form: y = Xβ + ε)
   - Ordinary Least Squares (if XᵀX invertible): β̂ = (XᵀX)⁻¹ Xᵀ y
   - Practical notes: check multicollinearity, scale features when needed, evaluate with train/test split.
 
+- Polynomial Regression (nonlinear in x, linear in parameters):
+  - Model (degree k): y = β₀ + β₁ x + β₂ x² + … + β_k x^k + ε
+  - View as linear regression on polynomial features Φ(x) = [1, x, x², …, x^k]
+  - OLS on transformed design matrix: β̂ = (ΦᵀΦ)⁻¹ Φᵀ y
+  - Practice: generate features via `sklearn.preprocessing.PolynomialFeatures`, fit with `LinearRegression`; tune degree with cross‑validation to avoid overfitting.
+
 Use scikit-learn for practical training/evaluation:
-- SLR/MLR: `from sklearn.linear_model import LinearRegression`
+- SLR/MLR/Poly: `from sklearn.linear_model import LinearRegression`, `from sklearn.preprocessing import PolynomialFeatures`
 - Split & metrics: `from sklearn.model_selection import train_test_split`, `from sklearn.metrics import mean_squared_error, r2_score`
 
 ---
