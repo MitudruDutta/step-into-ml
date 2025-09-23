@@ -39,7 +39,7 @@ Machine Learning (ML) uses data to learn patterns that generalize to unseen case
   - Common metrics:
     - MSE = (1/n) Σ (yᵢ − ŷᵢ)²
     - RMSE = √MSE
-    - R² = 1 − Σ(yᵢ − ȳ)² / Σ(yᵢ − ȳ)²
+    - R² = 1 − Σ(y − ŷ)² / Σ(y − ȳ)²
 
 - Multiple Linear Regression (many features):
   - Model: y = β₀ + β₁x₁ + … + β_px_p + ε (vector form: y = Xβ + ε)
