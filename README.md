@@ -15,6 +15,9 @@ A growing, hands-on workspace of Jupyter notebooks and small datasets to learn s
 - Polynomial Regression
   - Notebook: [poly_regression.ipynb](Supervised%20ML/Polynomial_Regression/poly_regression.ipynb)
   - Folder: [Supervised ML/Polynomial_Regression](Supervised%20ML/Polynomial_Regression/)
+- Regularization (Ridge/Lasso)
+  - Notebook: [l1l2regularization.ipynb](Supervised%20ML/L1L2Regularization/l1l2regularization.ipynb)
+  - Folder: [Supervised ML/L1L2Regularization](Supervised%20ML/L1L2Regularization/)
 - Train/Test Split
   - Notebook: [train_test_split.ipynb](Supervised%20ML/Train_Test_Split/train_test_split.ipynb)
   - Folder: [Supervised ML/Train_Test_Split](Supervised%20ML/Train_Test_Split/)
@@ -55,6 +58,25 @@ Machine Learning (ML) uses data to learn patterns that generalize to unseen case
 Use scikit-learn for practical training/evaluation:
 - SLR/MLR/Poly: `from sklearn.linear_model import LinearRegression`, `from sklearn.preprocessing import PolynomialFeatures`
 - Split & metrics: `from sklearn.model_selection import train_test_split`, `from sklearn.metrics import mean_squared_error, r2_score`
+
+---
+
+## Regularization essentials
+
+Regularization adds a penalty to control model complexity and reduce overfitting.
+
+- Ridge (L2):
+  - Objective: min_β (1/2n) ||y − Xβ||² + α ||β||²₂
+  - Closed-form: β̂ = (XᵀX + 2nα I)⁻¹ Xᵀ y
+  - Properties: shrinks coefficients smoothly; keeps all features; sensitive to feature scale.
+
+- Lasso (L1):
+  - Objective: min_β (1/2n) ||y − Xβ||² + α ||β||₁
+  - Solution: no closed-form; solved by coordinate descent/ISTA; can set some β_j exactly to 0 (feature selection).
+
+Tips:
+- Standardize features first: `StandardScaler()` inside a `Pipeline` with `Ridge`/`Lasso`.
+- Tune α via cross-validation: `RidgeCV`, `LassoCV`.
 
 ---
 

@@ -1,27 +1,29 @@
-# Python
+# Bytecode / cache
 __pycache__/
 *.py[cod]
-*$py.class
+*.pyo
 
 # Jupyter
 .ipynb_checkpoints/
-*.ipynb_convert/
+*.ipynb_convert*
 
-# Environments
+# Virtual environments
 .venv/
 venv/
-.env/
-.env.*
+ENV/
 
-# OS files
+# OS / Editor
 .DS_Store
 Thumbs.db
-
-# Editors/IDEs
 .vscode/
 .idea/
 
-# Logs and caches
+# Data/intermediate (keep small CSVs in repo if needed; ignore large temp files)
+*.tmp
 *.log
-*.cache/
+
+# Python packaging
+build/
+dist/
+*.egg-info/
 
