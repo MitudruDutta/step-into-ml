@@ -27,6 +27,9 @@ A growing, hands-on workspace of Jupyter notebooks and small datasets to learn s
 - Decision Trees
   - Notebook: [decisiontree.ipynb](Supervised%20ML/Decision_tree/decisiontree.ipynb)
   - Folder: [Supervised ML/Decision_tree](Supervised%20ML/Decision_tree/)
+- Precision & Recall
+  - Notebook: [precision_recall.ipynb](Supervised%20ML/Precision_Recall/precision_recall.ipynb)
+  - Folder: [Supervised ML/Precision_Recall](Supervised%20ML/Precision_Recall/)
 
 For all other topics (e.g., scaling, regularization, classification, ensembles), navigate via the folder tree. Detailed write-ups live inside each topic, not here.
 
@@ -83,6 +86,30 @@ Regularization adds a penalty to control model complexity and reduce overfitting
 Tips:
 - Standardize features first: `StandardScaler()` inside a `Pipeline` with `Ridge`/`Lasso`.
 - Tune α via cross-validation: `RidgeCV`, `LassoCV`.
+
+---
+
+## Classification metrics essentials
+
+Confusion Matrix layout:
+
+|            | Predicted 0 | Predicted 1 |
+|------------|-------------|-------------|
+| Actual 0   | TN          | FP          |
+| Actual 1   | FN          | TP          |
+
+Key formulas (binary):
+- Precision = TP / (TP + FP)
+- Recall (Sensitivity) = TP / (TP + FN)
+- F1-Score = 2 * (Precision * Recall) / (Precision + Recall) = 2TP / (2TP + FP + FN)
+- Accuracy = (TP + TN) / (TP + TN + FP + FN)
+
+When to favor which:
+- High Precision: costly false positives (e.g. spam mislabeling important email)
+- High Recall: costly false negatives (e.g. disease screening)
+- F1: need balance under class imbalance
+
+(Deeper narrative lives in each topic folder; this section stays concise.)
 
 ---
 
