@@ -21,6 +21,12 @@ A growing, hands-on workspace of Jupyter notebooks and small datasets to learn s
 - Train/Test Split
   - Notebook: [train_test_split.ipynb](Supervised%20ML/Train_Test_Split/train_test_split.ipynb)
   - Folder: [Supervised ML/Train_Test_Split](Supervised%20ML/Train_Test_Split/)
+- Logistic Regression
+  - Notebook: [logisticregression.ipynb](Supervised%20ML/LogisticRegression/logisticregression.ipynb)
+  - Folder: [Supervised ML/LogisticRegression](Supervised%20ML/LogisticRegression/)
+- Decision Trees
+  - Notebook: [decisiontree.ipynb](Supervised%20ML/Decision_tree/decisiontree.ipynb)
+  - Folder: [Supervised ML/Decision_tree](Supervised%20ML/Decision_tree/)
 
 For all other topics (e.g., scaling, regularization, classification, ensembles), navigate via the folder tree. Detailed write-ups live inside each topic, not here.
 
