@@ -30,6 +30,9 @@ A growing, hands-on workspace of Jupyter notebooks and small datasets to learn s
 - Precision & Recall
   - Notebook: [precision_recall.ipynb](Supervised%20ML/Precision_Recall/precision_recall.ipynb)
   - Folder: [Supervised ML/Precision_Recall](Supervised%20ML/Precision_Recall/)
+- F1 Score & Confusion Matrix
+  - Notebook: [f1_confusion_matrix.ipynb](Supervised%20ML/F1_ConfusionMatrix/f1_confusion_matrix.ipynb)
+  - Folder: [Supervised ML/F1_ConfusionMatrix](Supervised%20ML/F1_ConfusionMatrix/)
 
 For all other topics (e.g., scaling, regularization, classification, ensembles), navigate via the folder tree. Detailed write-ups live inside each topic, not here.
 
