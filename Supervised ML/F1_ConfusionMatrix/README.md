@@ -124,6 +124,48 @@ If you see (for example):
 4. **Interpret the F1-Score**: The `classification_report` is used to generate the F1-score, and its meaning is explained in the context of the problem.
 5. (Optional) **Tune Threshold**: Explore trade-offs between Precision and Recall.
 
+### 🔥 Visualizing the Confusion Matrix
+```python
+import seaborn as sns
+import matplotlib.pyplot as plt
+from sklearn.metrics import ConfusionMatrixDisplay
+
+cm = confusion_matrix(y_test, y_pred)
+fig, ax = plt.subplots(1,2, figsize=(8,3))
+# Raw counts heatmap
+sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', ax=ax[0])
+ax[0].set_xlabel('Predicted'); ax[0].set_ylabel('Actual'); ax[0].set_title('Confusion Matrix')
+
+# Normalized (recall per class)
+cm_norm = cm.astype(float) / cm.sum(axis=1, keepdims=True)
+sns.heatmap(cm_norm, annot=True, fmt='.2f', cmap='Greens', ax=ax[1])
+ax[1].set_xlabel('Predicted'); ax[1].set_ylabel('Actual'); ax[1].set_title('Normalized (Recall)')
+plt.tight_layout(); plt.show()
+```
+
+### 📈 Beyond F1
+Consider also:
+- **ROC AUC**: Ranking quality across thresholds (good general measure, can be optimistic under heavy imbalance).
+- **PR AUC / Average Precision**: More informative for rare positives.
+- **Calibration**: Are predicted probabilities well aligned with empirical frequencies? (Use `calibration_curve`, `CalibratedClassifierCV`).
+
+### 🧮 Multi-Class Extension
+For multi-class problems, confusion matrix generalizes to an *n × n* grid. Key additions:
+- Report macro & weighted F1.
+- Examine per-class recall to detect minority class neglect.
+- Use `sklearn.metrics.confusion_matrix(y_true, y_pred, normalize='true')` for class-wise recall view.
+
+### ⚠️ Additional Pitfalls / Limitations
+- **F1 ignores TN**: In scenarios where correctly identifying negatives matters (e.g., screening capacity), pair with specificity or balanced accuracy.
+- **Probability calibration**: A high F1 does not imply well-calibrated probabilities for downstream risk scoring.
+- **Class prevalence drift**: If base rates shift in production, static threshold chosen offline may degrade.
+- **Optimizing on test set**: Selecting threshold using test metrics leaks information; use validation data or cross-validation.
+
+### 🛡 Mitigations
+- Use validation or CV for threshold selection.
+- Monitor drift (population stability index / feature distributions) post-deployment.
+- Calibrate model if decisions depend on probability magnitudes.
+
 ## 🚀 Running the Notebook (Quickstart)
 From the project root (after installing dependencies as per top-level README):
 
@@ -139,12 +181,14 @@ Dependencies (already in `requirements.txt`): pandas, scikit-learn, matplotlib, 
 - Ignoring threshold tuning when business costs differ.
 - Comparing F1 scores across datasets with different class balance (avoid—context matters).
 - Using weighted F1 and assuming minority class handled well (inspect per-class report!).
+- Failing to assess calibration or probability quality when probabilities drive action.
 
 ## 🔄 Possible Extensions
 - Plot Precision-Recall curve (`from sklearn.metrics import precision_recall_curve`).
 - Add ROC & AUC comparison.
 - Introduce F2 vs F0.5 for domain-driven emphasis.
 - Handle synthetic imbalance with `class_weight='balanced'` or resampling.
+- Add calibration curve & Brier score for probability assessment.
 
 ## 📂 Files
 
@@ -155,4 +199,4 @@ Dependencies (already in `requirements.txt`): pandas, scikit-learn, matplotlib, 
 ---
 
 ## ✅ Summary
-Use the confusion matrix to understand error types; use Precision/Recall to quantify type-specific performance; use F1 (or Fβ) when you need a single, balanced metric—especially under imbalance.
+Use the confusion matrix to understand error types; use Precision/Recall to quantify type-specific performance; use F1 (or Fβ) when you need a single, balanced metric—especially under imbalance. Complement with PR AUC / ROC AUC, examine calibration, and always choose thresholds aligned with real-world costs.
