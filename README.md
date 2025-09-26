@@ -33,6 +33,9 @@ A growing, hands-on workspace of Jupyter notebooks and small datasets to learn s
 - F1 Score & Confusion Matrix
   - Notebook: [f1_confusion_matrix.ipynb](Supervised%20ML/F1_ConfusionMatrix/f1_confusion_matrix.ipynb)
   - Folder: [Supervised ML/F1_ConfusionMatrix](Supervised%20ML/F1_ConfusionMatrix/)
+- ROC Curve & AUC
+  - Notebook: [rocauc.ipynb](Model%20Evaluation%20and%20Fine%20Tuning/ROCAUC/rocauc.ipynb)
+  - Folder: [Model Evaluation and Fine Tuning/ROCAUC](Model%20Evaluation%20and%20Fine%20Tuning/ROCAUC/)
 
 For all other topics (e.g., scaling, regularization, classification, ensembles), navigate via the folder tree. Detailed write-ups live inside each topic, not here.
 
