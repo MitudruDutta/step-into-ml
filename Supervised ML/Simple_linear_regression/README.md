@@ -42,6 +42,69 @@ Where:
 - `x̄` is the mean of the independent variable `x`.
 - `ȳ` is the mean of the dependent variable `y`.
 
+### 📐 Evaluation Metrics
+
+Once the model is trained, we evaluate how well it generalizes:
+
+```
+Residual (e_i) = y_i - ŷ_i
+MSE = (1/n) Σ (y_i - ŷ_i)²
+RMSE = √MSE
+MAE = (1/n) Σ |y_i - ŷ_i|
+R² = 1 − Σ(y_i − ŷ_i)² / Σ(y_i − ȳ)²
+```
+
+- **MSE / RMSE**: Penalize larger errors more (squared term). RMSE in original units.
+- **MAE**: Robust to outliers compared to MSE.
+- **R²**: Proportion of variance explained (can be negative if model performs worse than predicting the mean).
+
+### ✅ Core Assumptions (for inference / reliability)
+
+1. **Linearity**: Relationship between X and y is linear.
+2. **Independence**: Residuals are independent (no autocorrelation).
+3. **Homoscedasticity**: Constant variance of residuals across X.
+4. **Normality of residuals** (mainly for confidence intervals / hypothesis tests).
+5. **No influential outliers** distorting the fit.
+
+(For pure prediction with ML mindset, mild violations may be acceptable—but diagnostics still help.)
+
+### 🔍 Diagnostic Checks
+
+- Scatter plot of `area` vs `price` → assesses linearity.
+- Residuals vs predicted values → look for random scatter (no patterns).
+- Histogram / KDE or QQ plot of residuals → normality check (optional).
+- Leverage/outlier detection: Cook’s distance (advanced extension).
+
+## 🧪 Minimal scikit-learn Example
+
+```python
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error, r2_score
+
+# Load data
+df = pd.read_csv('home_prices.csv')
+X = df[['area_sqr_ft']]
+y = df['price_lakhs']
+
+# Split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Train
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+# Predict
+y_pred = model.predict(X_test)
+
+# Metrics
+mse = mean_squared_error(y_test, y_pred)
+rmse = mse ** 0.5
+r2 = r2_score(y_test, y_pred)
+print(f"RMSE: {rmse:.3f} | R²: {r2:.3f}")
+```
+
 ## 📊 Dataset
 
 - **File**: `home_prices.csv`
@@ -51,21 +114,54 @@ Where:
 
 ## 🛠 Implementation Steps
 
-1.  **Load Data**: The `home_prices.csv` dataset is loaded using the pandas library.
-2.  **Data Exploration**: Basic exploration is done to understand the data's structure and to check for a linear relationship.
-3.  **Visualization**: A scatter plot is created to visualize the relationship between `area_sqr_ft` and `price_lakhs`.
-4.  **Train-Test Split**: The dataset is split into training and testing sets to evaluate the model's performance on unseen data.
-5.  **Model Training**: A `LinearRegression` model from `scikit-learn` is trained on the training data.
-6.  **Prediction**: The trained model is used to make predictions on the test set.
-7.  **Evaluation**: The model's performance is evaluated by checking its R-squared score and visualizing the regression line.
+1. **Load Data**: The `home_prices.csv` dataset is loaded using pandas.
+2. **Data Exploration**: Explore basic stats and inspect for anomalies/outliers.
+3. **Visualization**: Scatter plot of `area_sqr_ft` vs `price_lakhs` to confirm linear trend.
+4. **Train-Test Split**: Split to evaluate on unseen data (prevents optimistic bias).
+5. **Model Training**: Fit `LinearRegression` from scikit-learn.
+6. **Prediction**: Generate predictions on the test set.
+7. **Evaluation**: Compute RMSE, R²; plot regression line and residuals.
+8. (Optional) **Diagnostics**: Residual plot, leverage points, transform variables if non-linear.
+
+## ⚠️ Common Pitfalls
+
+- Extrapolating beyond the observed range of `area_sqr_ft`.
+- Ignoring outliers that skew slope.
+- R² obsession: High R² doesn’t imply causal relationship.
+- Using a single train/test split instead of cross-validation for small datasets.
+- Not checking residual patterns (hidden non-linearity).
+
+## 🚀 Running the Notebook
+
+From the project root (after installing dependencies):
+
+```batch
+jupyter notebook "Supervised ML/Simple_linear_regression/linear_regression_single_variable.ipynb"
+```
+
+Or open via the Jupyter UI.
+
+## 🔄 Extensions
+
+- Add **multiple features** (bedrooms, location) → Multiple Linear Regression.
+- Try **polynomial features** if curvature appears.
+- Apply **regularization** (Ridge/Lasso) if expanding features.
+- Use **log transformation** if variance increases with area.
+- Add **confidence intervals** for predictions (via statsmodels or bootstrapping).
 
 ## ✅ Key Takeaways
 
-- **Strengths**: Simple to implement, easily interpretable, and provides a good baseline for regression problems.
-- **Limitations**: Assumes a linear relationship between variables. It can be sensitive to outliers.
-- **Use Cases**: Predicting stock prices, forecasting sales, analyzing the relationship between advertising spend and revenue, etc.
+- **Strengths**: Simple to implement, easily interpretable, and provides a good baseline.
+- **Limitations**: Assumes linearity; sensitive to outliers; weak under complex relationships.
+- **Best Practice**: Always visualize and validate assumptions before trusting inferences.
 
 ## 📂 Files
 
 - `linear_regression_single_variable.ipynb`: The Jupyter Notebook with the Python code and explanations.
 - `home_prices.csv`: The dataset used for training and testing.
+
+---
+
+## 🧾 Summary
+
+This module introduces the simplest predictive model: fit a line minimizing squared errors, evaluate with RMSE and R², verify assumptions, and build intuition before moving to richer models.
