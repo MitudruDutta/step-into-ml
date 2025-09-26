@@ -194,7 +194,6 @@ Dependencies (already in `requirements.txt`): pandas, scikit-learn, matplotlib, 
 
 - `f1_confusion_matrix.ipynb`: The Jupyter Notebook with the code and detailed explanations.
 - `car_ownership.csv`: The dataset used for the demonstration.
-- `f1_confusion_matrix.xlsx`: A spreadsheet that may contain manual calculations or explanations.
 
 ---
 
