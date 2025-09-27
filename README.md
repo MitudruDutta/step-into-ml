@@ -39,6 +39,9 @@ A growing, hands-on workspace of Jupyter notebooks and small datasets to learn s
 - Support Vector Machine (SVM)
   - Notebook: [SVM.ipynb](Supervised%20ML/SVM/SVM.ipynb)
   - Folder: [Supervised ML/SVM](Supervised%20ML/SVM/)
+- Naive Bayes (SMS Spam Classification)
+  - Notebook: [smsclassifier.ipynb](Supervised%20ML/NaiveBayes_SMSSpamClassification_/smsclassifier.ipynb)
+  - Folder: [Supervised ML/NaiveBayes_SMSSpamClassification_](Supervised%20ML/NaiveBayes_SMSSpamClassification_/)
 
 For all other topics (e.g., scaling, regularization, classification, ensembles), navigate via the folder tree. Detailed write-ups live inside each topic, not here.
 
