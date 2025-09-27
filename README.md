@@ -36,6 +36,9 @@ A growing, hands-on workspace of Jupyter notebooks and small datasets to learn s
 - ROC Curve & AUC
   - Notebook: [rocauc.ipynb](Model%20Evaluation%20and%20Fine%20Tuning/ROCAUC/rocauc.ipynb)
   - Folder: [Model Evaluation and Fine Tuning/ROCAUC](Model%20Evaluation%20and%20Fine%20Tuning/ROCAUC/)
+- Support Vector Machine (SVM)
+  - Notebook: [SVM.ipynb](Supervised%20ML/SVM/SVM.ipynb)
+  - Folder: [Supervised ML/SVM](Supervised%20ML/SVM/)
 
 For all other topics (e.g., scaling, regularization, classification, ensembles), navigate via the folder tree. Detailed write-ups live inside each topic, not here.
 
