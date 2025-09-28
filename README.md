@@ -48,6 +48,9 @@ A growing, hands-on workspace of Jupyter notebooks and small datasets to learn s
 - One-Hot Encoding (Categorical Features)
   - Notebook: [one_hot_encoding.ipynb](Supervised%20ML/One_Hot_Encoding/one_hot_encoding.ipynb)
   - Folder: [Supervised ML/One_Hot_Encoding](Supervised%20ML/One_Hot_Encoding/)
+- Scikit-Learn Pipeline
+  - Notebook: [sklearnpipeline.ipynb](Supervised%20ML/SklearnPipeline/sklearnpipeline.ipynb)
+  - Folder: [Supervised ML/SklearnPipeline](Supervised%20ML/SklearnPipeline/)
 
 For all other topics (e.g., scaling, regularization, classification, ensembles), navigate via the folder tree. Detailed write-ups live inside each topic, not here.
 
