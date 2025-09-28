@@ -42,6 +42,9 @@ A growing, hands-on workspace of Jupyter notebooks and small datasets to learn s
 - Naive Bayes (SMS Spam Classification)
   - Notebook: [smsclassifier.ipynb](Supervised%20ML/NaiveBayes_SMSSpamClassification_/smsclassifier.ipynb)
   - Folder: [Supervised ML/NaiveBayes_SMSSpamClassification_](Supervised%20ML/NaiveBayes_SMSSpamClassification_/)
+- Feature Scaling (Min-Max & Standardization)
+  - Notebook: [scaling.ipynb](Supervised%20ML/Data_Scaling(Min_Max)/scaling.ipynb)
+  - Folder: [Supervised ML/Data_Scaling(Min_Max)](Supervised%20ML/Data_Scaling(Min_Max)/)
 
 For all other topics (e.g., scaling, regularization, classification, ensembles), navigate via the folder tree. Detailed write-ups live inside each topic, not here.
 
