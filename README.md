@@ -45,6 +45,9 @@ A growing, hands-on workspace of Jupyter notebooks and small datasets to learn s
 - Feature Scaling (Min-Max & Standardization)
   - Notebook: [scaling.ipynb](Supervised%20ML/Data_Scaling(Min_Max)/scaling.ipynb)
   - Folder: [Supervised ML/Data_Scaling(Min_Max)](Supervised%20ML/Data_Scaling(Min_Max)/)
+- One-Hot Encoding (Categorical Features)
+  - Notebook: [one_hot_encoding.ipynb](Supervised%20ML/One_Hot_Encoding/one_hot_encoding.ipynb)
+  - Folder: [Supervised ML/One_Hot_Encoding](Supervised%20ML/One_Hot_Encoding/)
 
 For all other topics (e.g., scaling, regularization, classification, ensembles), navigate via the folder tree. Detailed write-ups live inside each topic, not here.
 
