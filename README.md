@@ -51,6 +51,9 @@ A growing, hands-on workspace of Jupyter notebooks and small datasets to learn s
 - Scikit-Learn Pipeline
   - Notebook: [sklearnpipeline.ipynb](Supervised%20ML/SklearnPipeline/sklearnpipeline.ipynb)
   - Folder: [Supervised ML/SklearnPipeline](Supervised%20ML/SklearnPipeline/)
+- Customer Churn (Imbalanced Classification)
+  - Notebook: [churnprediction.ipynb](Supervised%20ML/CustomerChurn/churnprediction.ipynb)
+  - Folder: [Supervised ML/CustomerChurn](Supervised%20ML/CustomerChurn/)
 
 For all other topics (e.g., scaling, regularization, classification, ensembles), navigate via the folder tree. Detailed write-ups live inside each topic, not here.
 
@@ -149,10 +152,11 @@ When to favor which:
 11) Day 11: Naive Bayes
 12) Day 12: Feature Scaling & One‑Hot Encoding
 13) Day 13: Scikit‑Learn Pipelines
-14) Day 14: Random Forest
-15) Day 15: Gradient Boosting
-16) Day 16: XGBoost
-17) Day 17: Voting Ensembles
+14) Day 14: Customer Churn (Imbalanced Classification)
+15) Day 15: Random Forest
+16) Day 16: Gradient Boosting
+17) Day 17: XGBoost
+18) Day 18: Voting Ensembles
 
 This schedule is flexible; details are maintained inside each topic folder.
 
