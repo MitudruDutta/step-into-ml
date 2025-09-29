@@ -54,6 +54,9 @@ A growing, hands-on workspace of Jupyter notebooks and small datasets to learn s
 - Customer Churn (Imbalanced Classification)
   - Notebook: [churnprediction.ipynb](Supervised%20ML/CustomerChurn/churnprediction.ipynb)
   - Folder: [Supervised ML/CustomerChurn](Supervised%20ML/CustomerChurn/)
+- Random Forest (Ensemble Learning)
+  - Notebook: [randomforestclassification.ipynb](Ensemble%20Learning/RandomForest/randomforestclassification.ipynb)
+  - Folder: [Ensemble Learning/RandomForest](Ensemble%20Learning/RandomForest/)
 
 For all other topics (e.g., scaling, regularization, classification, ensembles), navigate via the folder tree. Detailed write-ups live inside each topic, not here.
 
