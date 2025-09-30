@@ -33,7 +33,7 @@ A growing, hands-on workspace of Jupyter notebooks and small datasets to learn s
 - F1 Score & Confusion Matrix
   - Notebook: [f1_confusion_matrix.ipynb](Supervised%20ML/F1_ConfusionMatrix/f1_confusion_matrix.ipynb)
   - Folder: [Supervised ML/F1_ConfusionMatrix](Supervised%20ML/F1_ConfusionMatrix/)
-- ROC Curve & AUC
+- ROC Curve & AUC (Model Evaluation)
   - Notebook: [rocauc.ipynb](Model%20Evaluation%20and%20Fine%20Tuning/ROCAUC/rocauc.ipynb)
   - Folder: [Model Evaluation and Fine Tuning/ROCAUC](Model%20Evaluation%20and%20Fine%20Tuning/ROCAUC/)
 - Support Vector Machine (SVM)
@@ -54,9 +54,17 @@ A growing, hands-on workspace of Jupyter notebooks and small datasets to learn s
 - Customer Churn (Imbalanced Classification)
   - Notebook: [churnprediction.ipynb](Supervised%20ML/CustomerChurn/churnprediction.ipynb)
   - Folder: [Supervised ML/CustomerChurn](Supervised%20ML/CustomerChurn/)
-- Random Forest (Ensemble Learning)
+
+### Ensemble Learning
+- Random Forest
   - Notebook: [randomforestclassification.ipynb](Ensemble%20Learning/RandomForest/randomforestclassification.ipynb)
   - Folder: [Ensemble Learning/RandomForest](Ensemble%20Learning/RandomForest/)
+- Gradient Boosting (Classification & Regression)
+  - Notebooks: [gradientboostclass.ipynb](Ensemble%20Learning/Gradient%20Boosting/gradientboostclass.ipynb) | [gradientboostreg.ipynb](Ensemble%20Learning/Gradient%20Boosting/gradientboostreg.ipynb)
+  - Folder: [Ensemble Learning/Gradient Boosting](Ensemble%20Learning/Gradient%20Boosting/)
+- XGBoost (Classification & Regression)
+  - Notebooks: [xgboostclassifier.ipynb](Ensemble%20Learning/XGBoost/xgboostclassifier.ipynb) | [xgboostregressor.ipynb](Ensemble%20Learning/XGBoost/xgboostregressor.ipynb)
+  - Folder: [Ensemble Learning/XGBoost](Ensemble%20Learning/XGBoost/)
 
 For all other topics (e.g., scaling, regularization, classification, ensembles), navigate via the folder tree. Detailed write-ups live inside each topic, not here.
 
@@ -159,7 +167,7 @@ When to favor which:
 15) Day 15: Random Forest
 16) Day 16: Gradient Boosting
 17) Day 17: XGBoost
-18) Day 18: Voting Ensembles
+18) Day 18: (Planned) Voting / Stacking Ensembles
 
 This schedule is flexible; details are maintained inside each topic folder.
 
@@ -198,3 +206,6 @@ We push changes incrementally, focusing one topic at a time. The top-level READM
 ## License
 
 No explicit license yet. Add a LICENSE (e.g., MIT) if you plan to share/reuse publicly.
+
+---
+_Last reviewed / updated: 2025-09-30_
