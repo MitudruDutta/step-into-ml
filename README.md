@@ -65,6 +65,9 @@ A growing, hands-on workspace of Jupyter notebooks and small datasets to learn s
 - XGBoost (Classification & Regression)
   - Notebooks: [xgboostclassifier.ipynb](Ensemble%20Learning/XGBoost/xgboostclassifier.ipynb) | [xgboostregressor.ipynb](Ensemble%20Learning/XGBoost/xgboostregressor.ipynb)
   - Folder: [Ensemble Learning/XGBoost](Ensemble%20Learning/XGBoost/)
+- Voting Ensembles (Majority / Soft / Weighted / Averaging)
+  - Notebooks: [ensemble_voting_classifier.ipynb](Ensemble%20Learning/Majority%2C%20Average%2C%20Weighted%20Average/ensemble_voting_classifier.ipynb) | [emsemble_voting_regressor.ipynb](Ensemble%20Learning/Majority%2C%20Average%2C%20Weighted%20Average/emsemble_voting_regressor.ipynb)
+  - Folder: [Ensemble Learning/Majority, Average, Weighted Average](Ensemble%20Learning/Majority%2C%20Average%2C%20Weighted%20Average/)
 
 For all other topics (e.g., scaling, regularization, classification, ensembles), navigate via the folder tree. Detailed write-ups live inside each topic, not here.
 
@@ -167,7 +170,8 @@ When to favor which:
 15) Day 15: Random Forest
 16) Day 16: Gradient Boosting
 17) Day 17: XGBoost
-18) Day 18: (Planned) Voting / Stacking Ensembles
+18) Day 18: Voting Ensembles (Majority / Soft / Weighted)
+19) Day 19: (Planned) Stacking / Blending
 
 This schedule is flexible; details are maintained inside each topic folder.
 
@@ -208,4 +212,4 @@ We push changes incrementally, focusing one topic at a time. The top-level READM
 No explicit license yet. Add a LICENSE (e.g., MIT) if you plan to share/reuse publicly.
 
 ---
-_Last reviewed / updated: 2025-09-30_
+_Last reviewed / updated: 2025-10-01_
