@@ -66,7 +66,7 @@ A growing, hands-on workspace of Jupyter notebooks and small datasets to learn s
   - Notebooks: [xgboostclassifier.ipynb](Ensemble%20Learning/XGBoost/xgboostclassifier.ipynb) | [xgboostregressor.ipynb](Ensemble%20Learning/XGBoost/xgboostregressor.ipynb)
   - Folder: [Ensemble Learning/XGBoost](Ensemble%20Learning/XGBoost/)
 - Voting Ensembles (Majority / Soft / Weighted / Averaging)
-  - Notebooks: [ensemble_voting_classifier.ipynb](Ensemble%20Learning/Majority%2C%20Average%2C%20Weighted%20Average/ensemble_voting_classifier.ipynb) | [emsemble_voting_regressor.ipynb](Ensemble%20Learning/Majority%2C%20Average%2C%20Weighted%20Average/emsemble_voting_regressor.ipynb)
+  - Notebooks: [ensemble_voting_classifier.ipynb](Ensemble%20Learning/Majority%2C%20Average%2C%20Weighted%20Average/ensemble_voting_classifier.ipynb) | [emsemble_voting_regressor.ipynb](Ensemble Learning/Majority, Average, Weighted Average/ensemble_voting_regressor.ipynb)
   - Folder: [Ensemble Learning/Majority, Average, Weighted Average](Ensemble%20Learning/Majority%2C%20Average%2C%20Weighted%20Average/)
 
 For all other topics (e.g., scaling, regularization, classification, ensembles), navigate via the folder tree. Detailed write-ups live inside each topic, not here.
