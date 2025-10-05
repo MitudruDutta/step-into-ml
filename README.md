@@ -36,6 +36,12 @@ A growing, hands-on workspace of Jupyter notebooks and small datasets to learn s
 - ROC Curve & AUC (Model Evaluation)
   - Notebook: [rocauc.ipynb](Model%20Evaluation%20and%20Fine%20Tuning/ROCAUC/rocauc.ipynb)
   - Folder: [Model Evaluation and Fine Tuning/ROCAUC](Model%20Evaluation%20and%20Fine%20Tuning/ROCAUC/)
+- K-Fold Cross-Validation (Model Evaluation)
+  - Notebook: [kfold.ipynb](Model%20Evaluation%20and%20Fine%20Tuning/KFoldCross/kfold.ipynb)
+  - Folder: [Model Evaluation and Fine Tuning/KFoldCross](Model%20Evaluation%20and%20Fine%20Tuning/KFoldCross/)
+- Stratified K-Fold Cross-Validation (Model Evaluation)
+  - Notebook: [stratifiedkfoldcross.ipynb](Model%20Evaluation%20and%20Fine%20Tuning/StratifiedKFold/stratifiedkfoldcross.ipynb)
+  - Folder: [Model Evaluation and Fine Tuning/StratifiedKFold](Model%20Evaluation%20and%20Fine%20Tuning/StratifiedKFold/)
 - Support Vector Machine (SVM)
   - Notebook: [SVM.ipynb](Supervised%20ML/SVM/SVM.ipynb)
   - Folder: [Supervised ML/SVM](Supervised%20ML/SVM/)
@@ -66,7 +72,7 @@ A growing, hands-on workspace of Jupyter notebooks and small datasets to learn s
   - Notebooks: [xgboostclassifier.ipynb](Ensemble%20Learning/XGBoost/xgboostclassifier.ipynb) | [xgboostregressor.ipynb](Ensemble%20Learning/XGBoost/xgboostregressor.ipynb)
   - Folder: [Ensemble Learning/XGBoost](Ensemble%20Learning/XGBoost/)
 - Voting Ensembles (Majority / Soft / Weighted / Averaging)
-  - Notebooks: [ensemble_voting_classifier.ipynb](Ensemble%20Learning/Majority%2C%20Average%2C%20Weighted%20Average/ensemble_voting_classifier.ipynb) | [emsemble_voting_regressor.ipynb](Ensemble Learning/Majority, Average, Weighted Average/ensemble_voting_regressor.ipynb)
+  - Notebooks: [ensemble_voting_classifier.ipynb](Ensemble%20Learning/Majority%2C%20Average%2C%20Weighted%20Average/ensemble_voting_classifier.ipynb) | [ensemble_voting_regressor.ipynb](Ensemble%20Learning/Majority%2C%20Average%2C%20Weighted%20Average/ensemble_voting_regressor.ipynb)
   - Folder: [Ensemble Learning/Majority, Average, Weighted Average](Ensemble%20Learning/Majority%2C%20Average%2C%20Weighted%20Average/)
 
 For all other topics (e.g., scaling, regularization, classification, ensembles), navigate via the folder tree. Detailed write-ups live inside each topic, not here.
@@ -212,4 +218,4 @@ We push changes incrementally, focusing one topic at a time. The top-level READM
 No explicit license yet. Add a LICENSE (e.g., MIT) if you plan to share/reuse publicly.
 
 ---
-_Last reviewed / updated: 2025-10-01_
+_Last reviewed / updated: 2025-10-06_
