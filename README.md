@@ -24,6 +24,9 @@ A growing, hands-on workspace of Jupyter notebooks and small datasets to learn s
 - Logistic Regression
   - Notebook: [logisticregression.ipynb](Supervised%20ML/LogisticRegression/logisticregression.ipynb)
   - Folder: [Supervised ML/LogisticRegression](Supervised%20ML/LogisticRegression/)
+- Multiclass Classification (Iris)
+  - Notebook: [multiclass_class.ipynb](Supervised%20ML/Multiclass_classification/multiclass_class.ipynb)
+  - Folder: [Supervised ML/Multiclass_classification](Supervised%20ML/Multiclass_classification/)
 - Decision Trees
   - Notebook: [decisiontree.ipynb](Supervised%20ML/Decision_tree/decisiontree.ipynb)
   - Folder: [Supervised ML/Decision_tree](Supervised%20ML/Decision_tree/)
@@ -221,4 +224,4 @@ We push changes incrementally, focusing one topic at a time. The top-level READM
 No explicit license yet. Add a LICENSE (e.g., MIT) if you plan to share/reuse publicly.
 
 ---
-_Last reviewed / updated: 2025-10-08_
+_Last reviewed / updated: 2025-10-09_
