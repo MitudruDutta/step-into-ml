@@ -42,6 +42,9 @@ A growing, hands-on workspace of Jupyter notebooks and small datasets to learn s
 - Stratified K-Fold Cross-Validation (Model Evaluation)
   - Notebook: [stratifiedkfoldcross.ipynb](Model%20Evaluation%20and%20Fine%20Tuning/StratifiedKFold/stratifiedkfoldcross.ipynb)
   - Folder: [Model Evaluation and Fine Tuning/StratifiedKFold](Model%20Evaluation%20and%20Fine%20Tuning/StratifiedKFold/)
+- Hyperparameter Tuning (GridSearchCV & RandomizedSearchCV)
+  - Notebooks: [gridsearchCV.ipynb](Model%20Evaluation%20and%20Fine%20Tuning/HyperParameter%20Tuning/gridsearchCV.ipynb) | [randomisedsearchCV.ipynb](Model%20Evaluation%20and%20Fine%20Tuning/HyperParameter%20Tuning/randomisedsearchCV.ipynb)
+  - Folder: [Model Evaluation and Fine Tuning/HyperParameter Tuning](Model%20Evaluation%20and%20Fine%20Tuning/HyperParameter%20Tuning/)
 - Support Vector Machine (SVM)
   - Notebook: [SVM.ipynb](Supervised%20ML/SVM/SVM.ipynb)
   - Folder: [Supervised ML/SVM](Supervised%20ML/SVM/)
@@ -218,4 +221,4 @@ We push changes incrementally, focusing one topic at a time. The top-level READM
 No explicit license yet. Add a LICENSE (e.g., MIT) if you plan to share/reuse publicly.
 
 ---
-_Last reviewed / updated: 2025-10-06_
+_Last reviewed / updated: 2025-10-08_
