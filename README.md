@@ -81,6 +81,11 @@ A growing, hands-on workspace of Jupyter notebooks and small datasets to learn s
   - Notebooks: [ensemble_voting_classifier.ipynb](Ensemble%20Learning/Majority%2C%20Average%2C%20Weighted%20Average/ensemble_voting_classifier.ipynb) | [ensemble_voting_regressor.ipynb](Ensemble%20Learning/Majority%2C%20Average%2C%20Weighted%20Average/ensemble_voting_regressor.ipynb)
   - Folder: [Ensemble Learning/Majority, Average, Weighted Average](Ensemble%20Learning/Majority%2C%20Average%2C%20Weighted%20Average/)
 
+### Feature Engineering
+- Correlation-Based Feature Selection
+  - Notebook: [featureusingcorr.ipynb](Feature%20Engineering/Correlation/featureusingcorr.ipynb)
+  - Folder: [Feature Engineering/Correlation](Feature%20Engineering/Correlation/)
+
 For all other topics (e.g., scaling, regularization, classification, ensembles), navigate via the folder tree. Detailed write-ups live inside each topic, not here.
 
 ---
