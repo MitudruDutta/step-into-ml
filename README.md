@@ -85,6 +85,9 @@ A growing, hands-on workspace of Jupyter notebooks and small datasets to learn s
 - Correlation-Based Feature Selection
   - Notebook: [featureusingcorr.ipynb](Feature%20Engineering/Correlation/featureusingcorr.ipynb)
   - Folder: [Feature Engineering/Correlation](Feature%20Engineering/Correlation/)
+- Variance Inflation Factor (VIF) - Multicollinearity Detection
+  - Notebook: [vif.ipynb](Feature%20Engineering/Variance%20Inflation%20Factor/vif.ipynb)
+  - Folder: [Feature Engineering/Variance Inflation Factor](Feature%20Engineering/Variance%20Inflation%20Factor/)
 
 For all other topics (e.g., scaling, regularization, classification, ensembles), navigate via the folder tree. Detailed write-ups live inside each topic, not here.
 
@@ -141,6 +144,28 @@ Regularization adds a penalty to control model complexity and reduce overfitting
 Tips:
 - Standardize features first: `StandardScaler()` inside a `Pipeline` with `Ridge`/`Lasso`.
 - Tune α via cross-validation: `RidgeCV`, `LassoCV`.
+
+---
+
+## Multicollinearity & VIF essentials
+
+Multicollinearity occurs when predictor variables are highly correlated, causing unstable coefficient estimates in linear models.
+
+- Variance Inflation Factor (VIF):
+  - Formula: VIF_i = 1 / (1 - R²_i), where R²_i is from regressing feature i against all other features
+  - Interpretation:
+    - VIF = 1: No correlation
+    - 1 < VIF < 5: Moderate correlation (acceptable)
+    - 5 ≤ VIF < 10: High correlation (concerning)
+    - VIF ≥ 10: Very high correlation (action required)
+
+- Detection & Solutions:
+  - Calculate VIF: `from statsmodels.stats.outliers_influence import variance_inflation_factor`
+  - Remove features with VIF > 10 iteratively (highest first)
+  - Alternative: Use regularization (Ridge/Lasso) which handles multicollinearity naturally
+  - Always recalculate VIF after removing features
+
+Practice: Check VIF before finalizing linear regression models; prioritize model interpretability and stability over minor performance gains.
 
 ---
 
