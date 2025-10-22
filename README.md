@@ -89,6 +89,11 @@ A growing, hands-on workspace of Jupyter notebooks and small datasets to learn s
   - Notebook: [vif.ipynb](Feature%20Engineering/Variance%20Inflation%20Factor/vif.ipynb)
   - Folder: [Feature Engineering/Variance Inflation Factor](Feature%20Engineering/Variance%20Inflation%20Factor/)
 
+### Unsupervised Learning
+- K-Means Clustering (Customer Segmentation)
+  - Notebook: [kmeans.ipynb](Unsupervised%20Learning/KMeans/kmeans.ipynb)
+  - Folder: [Unsupervised Learning/KMeans](Unsupervised%20Learning/KMeans/)
+
 For all other topics (e.g., scaling, regularization, classification, ensembles), navigate via the folder tree. Detailed write-ups live inside each topic, not here.
 
 ---
@@ -166,6 +171,35 @@ Multicollinearity occurs when predictor variables are highly correlated, causing
   - Always recalculate VIF after removing features
 
 Practice: Check VIF before finalizing linear regression models; prioritize model interpretability and stability over minor performance gains.
+
+---
+
+## K-Means Clustering essentials
+
+K-Means is a centroid-based unsupervised learning algorithm that partitions data into k clusters.
+
+- Algorithm Overview:
+  - Objective: minimize within-cluster sum of squares (WCSS)
+  - Formula: J = Σ(i=1 to k) Σ(x∈Ci) ||x - μi||²
+  - Steps: Initialize centroids → Assign points → Update centroids → Repeat until convergence
+
+- Key Considerations:
+  - **Feature Scaling**: Always scale features (StandardScaler/MinMaxScaler) since K-Means uses Euclidean distance
+  - **Choosing k**: Use elbow method, silhouette analysis, or domain knowledge
+  - **Initialization**: K-Means++ (default in scikit-learn) provides better starting centroids
+
+- Applications:
+  - **Customer Segmentation**: Group customers by behavior/demographics
+  - **Feature Engineering**: Create cluster-based features, dimensionality reduction
+  - **Market Research**: Identify distinct market segments
+  - **Anomaly Detection**: Points far from centroids may be outliers
+
+- Implementation:
+  - Basic: `from sklearn.cluster import KMeans`
+  - Evaluation: `from sklearn.metrics import silhouette_score`
+  - Preprocessing: Always use `StandardScaler()` or `MinMaxScaler()`
+
+Practice: Scale features first, determine optimal k, validate business relevance of clusters, and use centroids for segment profiling.
 
 ---
 
