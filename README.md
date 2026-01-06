@@ -377,8 +377,8 @@ Follow this structured path to master Machine Learning fundamentals:
 
 #### Option 1: Clone Repository
 ```bash
-git clone https://github.com/your-username/Step-Into-Machine-Learning.git
-cd Step-Into-Machine-Learning
+git clone https://github.com/MitudruDutta/step-into-ml.git
+cd step-into-ml
 ```
 
 #### Option 2: Download ZIP
